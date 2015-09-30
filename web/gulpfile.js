@@ -12,37 +12,36 @@ var gulp        = require('gulp'),
     rimraf      = require('gulp-rimraf'),
     connect     = require('gulp-connect'),
     opn         = require('opn'),
-    jade        = require('gulp-jade');
-var path = {
-    build:{
-        html    : 'build/',
-        js      : 'build/js/',
-        css     : 'build/css/',
-        img     : 'build/img/',
-        fonts   : 'build/fonts/',
-        ico     : 'build/'
+    jade        = require('gulp-jade'),
+    plumber = require('gulp-plumber'),
+    path = {
+        build:{
+            html    : 'build/',
+            js      : 'build/js/',
+            css     : 'build/css/',
+            img     : 'build/img/',
+            fonts   : 'build/fonts/',
+            ico     : 'build/'
 
-    },
-    src:{
-        html            : 'src/*.html',
-        jade            : 'src/jade/**/*.jade',
-        js              : 'src/js/main.js',
-        css             : 'src/style/main.scss',
-        img             : 'src/img/**/*.*',
-        fonts           : 'src/fonts/**/*.*',
-        ico             : 'src/*.ico'
-    },
-    dev: {
-        templates       : 'src/template/'
-    },
-    watch: {
-        html    : 'src/**/*.html',
-        js      : 'src/js/**/*.js',
-        css     : 'src/style/**/*.scss',
-        img     : 'src/img/**/*.*',
-        fonts   : 'src/fonts/**/*.*'
-    },
-    clean: "build/"
+        },
+        src:{
+            html    : 'src/*.html',
+            jade    : 'src/jade/*.jade',
+            js      : 'src/js/main.js',
+            css     : 'src/style/main.scss',
+            img     : 'src/img/**/*.*',
+            fonts   : 'src/fonts/**/*.*',
+            ico     : 'src/*.ico'
+        },
+        watch: {
+            html    : 'src/**/*.html',
+            jade    : 'src/jade/**/*.jade',
+            js      : 'src/js/**/*.js',
+            css     : 'src/style/**/*.scss',
+            img     : 'src/img/**/*.*',
+            fonts   : 'src/fonts/**/*.*'
+        },
+        clean: "build/"
 };
 var server = {
     host        : 'localhost',
@@ -50,24 +49,23 @@ var server = {
 };
 gulp.task('html:build',function(){
     gulp.src(path.src.jade)
+        .pipe(plumber())
         .pipe(jade({
             pretty: true
         }))
-        .pipe(gulp.dest(path.dev.templates));
-
-    /*gulp.src(path.src.html)
-        .pipe(rigger())
         .pipe(gulp.dest(path.build.html))
-        .pipe(connect.reload())*/
+        .pipe(connect.reload())
 });
 gulp.task('js:build',function(){
     gulp.src(path.src.js)
+        .pipe(plumber())
         .pipe(rigger())
         .pipe(gulp.dest(path.build.js))
         .pipe(connect.reload())
 });
 gulp.task('style:build',function(){
     gulp.src(path.src.css)
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(prefixer())
@@ -78,6 +76,7 @@ gulp.task('style:build',function(){
 });
 gulp.task('image:build',function(){
     gulp.src(path.src.img)
+        .pipe(plumber())
         .pipe(imagemin({
             progressive:true,
             svgoPlugins:[{
@@ -96,6 +95,7 @@ gulp.task('image:build',function(){
 });
 gulp.task('fonts:build',function(){
     gulp.src(path.src.fonts)
+        .pipe(plumber())
         .pipe(gulp.dest(path.build.fonts))
 });
 gulp.task('build',[
@@ -106,7 +106,7 @@ gulp.task('build',[
     'fonts:build'
 ]);
 gulp.task('watch',function(){
-    watch([path.watch.html],function(){
+    watch([path.watch.jade],function(){
         gulp.start('html:build');
     });
     watch([path.watch.js],function(){
@@ -124,9 +124,9 @@ gulp.task('watch',function(){
 });
 gulp.task('webserver',function(){
     connect.server({
-        host:server.host,
-        port:server.port,
-        livereload:true
+        host: server.host,
+        port: server.port,
+        livereload: true
     });
 });
 gulp.task('clean',function(cb){
@@ -139,6 +139,6 @@ gulp.task('default',[
     'clean',
     'build',
     'webserver',
-    'watch',
-    'openbrowser'
+    'watch'//,
+   // 'openbrowser'
 ]);
