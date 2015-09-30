@@ -11,7 +11,8 @@ var gulp        = require('gulp'),
     pngquant    = require('imagemin-pngquant'),
     rimraf      = require('gulp-rimraf'),
     connect     = require('gulp-connect'),
-    opn         = require('opn');
+    opn         = require('opn'),
+    jade        = require('gulp-jade');
 var path = {
     build:{
         html    : 'build/',
@@ -23,14 +24,18 @@ var path = {
 
     },
     src:{
-        html    : 'src/*.html',
-        js      : 'src/js/main.js',
-        css     : 'src/style/main.scss',
-        img     : 'src/img/**/*.*',
-        fonts   : 'src/fonts/**/*.*',
-        ico     : 'src/*.ico'
+        html            : 'src/*.html',
+        jade            : 'src/jade/**/*.jade',
+        js              : 'src/js/main.js',
+        css             : 'src/style/main.scss',
+        img             : 'src/img/**/*.*',
+        fonts           : 'src/fonts/**/*.*',
+        ico             : 'src/*.ico'
     },
-    watch:{
+    dev: {
+        templates       : 'src/template/'
+    },
+    watch: {
         html    : 'src/**/*.html',
         js      : 'src/js/**/*.js',
         css     : 'src/style/**/*.scss',
@@ -44,10 +49,16 @@ var server = {
     port        : '8888'
 };
 gulp.task('html:build',function(){
-    gulp.src(path.src.html)
+    gulp.src(path.src.jade)
+        .pipe(jade({
+            pretty: true
+        }))
+        .pipe(gulp.dest(path.dev.templates));
+
+    /*gulp.src(path.src.html)
         .pipe(rigger())
         .pipe(gulp.dest(path.build.html))
-        .pipe(connect.reload())
+        .pipe(connect.reload())*/
 });
 gulp.task('js:build',function(){
     gulp.src(path.src.js)
