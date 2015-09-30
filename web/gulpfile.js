@@ -9,7 +9,7 @@ var gulp        = require('gulp'),
     rigger      = require('gulp-rigger'),
     imagemin    = require('gulp-imagemin'),
     pngquant    = require('imagemin-pngquant'),
-    rimraf      = require('rimraf'),
+    rimraf      = require('gulp-rimraf'),
     connect     = require('gulp-connect'),
     opn         = require('opn');
 var path = {
@@ -37,7 +37,7 @@ var path = {
         img     : 'src/img/**/*.*',
         fonts   : 'src/fonts/**/*.*'
     },
-    clean: "build"
+    clean: "build/"
 };
 var server = {
     host        : 'localhost',
@@ -95,19 +95,19 @@ gulp.task('build',[
     'fonts:build'
 ]);
 gulp.task('watch',function(){
-    watch([path.watch.html],function(event,cb){
+    watch([path.watch.html],function(){
         gulp.start('html:build');
     });
-    watch([path.watch.js],function(event,cb){
+    watch([path.watch.js],function(){
         gulp.start('js:build');
     });
-    watch([path.watch.css],function(event,cb){
+    watch([path.watch.css],function(){
         gulp.start('style:build');
     });
-    watch([path.watch.img],function(event,cb){
+    watch([path.watch.img],function(){
         gulp.start('image:build');
     });
-    watch([path.watch.fonts],function(event,cb){
+    watch([path.watch.fonts],function(){
         gulp.start('fonts:build');
     });
 });
@@ -119,7 +119,7 @@ gulp.task('webserver',function(){
     });
 });
 gulp.task('clean',function(cb){
-    rimraf(path.clean,cb);
+    rimraf(path.clean, cb);
 });
 gulp.task('openbrowser',function(){
     opn('http://'+server.host+':'+server.port+'/build');
