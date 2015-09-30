@@ -18,5 +18,8 @@
     "imagemin-pngquant": "*",
     "opn": "*",
     "gulp-rimraf": "*"
+  },
+  "dependencies": {
+    "jade": "^1.11.0"
   }
 }
