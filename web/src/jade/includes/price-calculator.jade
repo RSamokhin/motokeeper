@@ -1,0 +1,23 @@
+div(class='calculator-container')
+    div(class='calculator__box-container')
+        input(class='calculator__box calculator__box-input' placeholder='Ваше имя')
+        div(class='calculator__box calculator__box-selector-container')
+            select
+                option(value='' disabled selected) Тип мотоцикла
+                option(value='До 700 куб.см') До 700 куб.см
+                option(value='До 1400 куб.см') До 1400 куб.см
+                option(value='Более 1400 куб. см') Более 1400 куб. см
+                option(value='Max-Size') Max-Size
+        div(class='calculator__box calculator__box-selector-container')
+            - var n = 1
+            select
+                option(value='' disabled selected) Кол-во месяцев
+                while n < 7
+                    - var m = n++
+                    option(value=m)=m
+        input(class='calculator__box calculator__box-input' placeholder='Телефон для связи')
+    span(class='calculator-law') Ваши данные не будут переданы третьим лицам.
+    div(class='calculator__button')
+        span(class='calculator__button-label') Бронировать
+        div(class='calculator__button-icon')
+    span(class='calculator-price') 6000 руб.
