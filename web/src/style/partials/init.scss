@@ -1,0 +1,73 @@
+$main-bg-color: black;
+$main-font-color: white;
+.head {
+    background-color: $main-bg-color;
+    color: $main-font-color;
+    height: 100px;
+    width: 100%;
+    &__menu {
+        &-container {
+            width: 50%;
+            height: 100%;
+            display: inline-block;
+            margin-right: 20px;
+        }
+        &-label{
+            font-size: 20px;
+            float: right;
+            margin-right: 35px;
+            line-height: 120px;
+            text-align: left;
+            cursor: pointer;
+            &:first-child {
+                margin-right:120px;
+            }
+            &:hover {
+                color: #528CE0;
+                opacity: 0.7;
+            }
+        }
+    }
+    &__icon {
+        &-container {
+            display: inline-block;
+            height: 100%;
+            width: 80px;
+            background-image: url(../img/images/header-logo.png);
+            background-size: cover;
+        }
+    }
+    &__contacts {
+        &-container {
+            display: inline-block;
+            height: 100%;
+            width: 330px;
+        }
+        &-phone {
+            font-size: 35px;
+            font-style: italic;
+            display: block;
+            cursor: pointer;
+            float: right;
+            line-height: 45px;
+            margin-top: 13px;
+        }
+        &-email {
+            display: block;
+            font-style: italic;
+            cursor: pointer;
+            float: right;
+            line-height: 30px;
+            font-size: 23px;
+        }
+        &-link {
+            color: white !important;
+            text-decoration: none !important;
+        }
+    }
+}
+.foot {
+    background-color: #EAEAEA;
+    width: 100%;
+    height: 100px;
+}
