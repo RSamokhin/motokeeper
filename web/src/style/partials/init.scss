@@ -294,10 +294,72 @@ body {
         right: 0;
         background-size: contain;
         background-repeat: no-repeat;
-        height: 400px;
+        height: 350px;
         width: 600px;
         display: inline-block;
         background-position: center;
+    }
+}
+.cameras {
+    &-container {
+        width: 100%;
+        position: relative;
+        &:after{
+            content:".";
+            display:block;
+            clear:both;
+            visibility:hidden;
+        }
+    }
+    &-box {
+        background-color: #dcdcdc;
+        height: 350px;
+        width: 350px;
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 20px auto;
+        cursor: pointer;
+        &:after {
+            content: 'Настраиваем';
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            height: 20px;
+            width: 100px;
+            margin:auto;
+        }
+    }
+    &__button {
+        background-color: #46AC52;
+        border-radius: 5px;
+        width: 350px;
+        margin: 35px auto ;
+        height: 60px;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.7;
+        }
+        &-label {
+            color: white;
+            font-weight: bold;
+            line-height: 60px;
+            display: inline;
+            margin-left: 40px;
+            float: left;
+            font-size: 23px;
+        }
+        &-icon {
+            background-image: url("../img/icon/icon-camera.png");
+            height: 60px;
+            display: inline-block;
+            width: 48px;
+            background-repeat: no-repeat;
+            margin-left: 17px;
+            margin-top: 15px;
+        }
     }
 }
 @mixin placeholder-mixin {
