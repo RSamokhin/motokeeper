@@ -398,6 +398,27 @@ body {
         }
     }
 }
+.services {
+    &-container {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    &-label {
+        font-weight: bold;
+        font-size: 20px;
+        display: block;
+    }
+    &__list {
+        &-item {
+            line-height: 25px;
+            margin-bottom: 15px;
+        }
+        & u {
+            -moz-text-decoration-color: red;
+            text-decoration-color: red;
+        }
+    }
+}
 @mixin placeholder-mixin {
     color:black;
     font-size: 20px;
