@@ -109,6 +109,12 @@ body {
         margin-top: 70px;
         margin-bottom: 70px;
     }
+    &-hr {
+        position: relative;
+        border-top: 1px solid #dcdcdc;
+        border-bottom: none;
+        margin: 0;
+    }
 }
 .calculator {
     &-container {
@@ -167,7 +173,7 @@ body {
         background-color: #46AC52;
         border-radius: 5px;
         width: 333px;
-        margin: 40px auto ;
+        margin: 35px auto ;
         height: 60px;
         cursor: pointer;
         &:hover {
@@ -198,6 +204,100 @@ body {
         width: 200px;
         text-align: center;
         margin: 0 auto;
+        font-weight: bold;
+    }
+}
+.motos {
+    &__box {
+        box-sizing: border-box;
+        width: 48%;
+        display: block;
+        &:nth-child(odd) {
+            float: left;
+        }
+        &:nth-child(even) {
+            float: right;
+        }
+        &-name {
+            width: 100%;
+            margin: 10px auto;
+            text-align: center;
+            font-weight: bold;
+            display: block;
+        }
+        &-price {
+            width: 100%;
+            margin: 20px auto;
+            text-align: center;
+            font-weight: bold;
+            color: red;
+            display: block;
+        }
+        &-picture {
+            width: 70%;
+            height: 200px;
+            margin: 10px auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    &__container {
+        width: 100%;
+        box-sizing: border-box;
+        &:after{
+            content:".";
+            display:block;
+            clear:both;
+            visibility:hidden;
+        }
+    }
+}
+.saleship {
+    &__container {
+        height: 350px;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+    }
+    &-sign {
+        box-sizing: border-box;
+        width: 75px;
+        height: 100%;
+        background-size: cover;
+        background-image: url(../img/images/content-sign.png);
+        float:left;
+        display: inline-block;
+    }
+    &-text {
+        font-weight: bold;
+        font-size: 30px;
+        width: 200px;
+        text-align: center;
+        white-space: pre-wrap;
+        line-height: 50px;
+        margin: auto 35px;
+        height: 200px;
+        display: inline-block;
+        float: right;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+    &-car {
+        background-image: url("../img/images/content-car.png");
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        margin-left: 300px;
+        right: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 400px;
+        width: 600px;
+        display: inline-block;
+        background-position: center;
     }
 }
 @mixin placeholder-mixin {
