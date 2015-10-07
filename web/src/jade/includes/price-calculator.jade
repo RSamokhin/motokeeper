@@ -1,23 +1,27 @@
 div(class='calculator-container')
+    span(class='calculator-law-phone') Формат ввода: +7(909)625-06-68 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     div(class='calculator__box-container')
-        input(class='calculator__box calculator__box-input' placeholder='Ваше имя')
+        div(class='calculator__box')
+            input(class='calculator__box-input' placeholder='Ваше имя' data-bind-keydown='clearError')
         div(class='calculator__box calculator__box-selector-container')
-            select
+            select(data-bind-change='calculatePrice' data-bind-keydown='clearError')
                 option(value='' disabled selected) Тип мотоцикла
-                option(value='До 700 куб.см') До 700 куб.см
-                option(value='До 1400 куб.см') До 1400 куб.см
-                option(value='Более 1400 куб. см') Более 1400 куб. см
-                option(value='Max-Size') Max-Size
+                option(value='1200') До 700 куб.см
+                option(value='1300') До 1400 куб.см
+                option(value='1400') Более 1400 куб. см
+                option(value='1500') Max-Size
         div(class='calculator__box calculator__box-selector-container')
             - var n = 1
-            select
+            select(data-bind-change='calculatePrice' data-month='true' data-bind-keydown='clearError')
                 option(value='' disabled selected) Кол-во месяцев
                 while n < 7
                     - var m = n++
                     option(value=m)=m
-        input(class='calculator__box calculator__box-input' placeholder='Телефон для связи')
+        div(class='calculator__box')
+            input(class='calculator__box-input' placeholder='Телефон для связи' data-bind-keydown='clearError' data-bind-keyup='validatePhone')
     span(class='calculator-law') Ваши данные не будут переданы третьим лицам.
-    div(class='calculator__button')
+    div(class='calculator__button' data-bind-click='sendRequest')
         span(class='calculator__button-label') Бронировать
         div(class='calculator__button-icon')
-    span(class='calculator-price') 6000 руб.
+    span(class='calculator-price') 0 руб.
+    span(class='calculator-price-comment') Выберите размер мотоцикла и срок хранения.

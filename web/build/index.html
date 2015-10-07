@@ -2,105 +2,110 @@
 <html>
   <head>
     <title>MotoKeeper</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
-  <body>
-    <section class="head">
-      <div class="head__menu-container">
-        <div class="head__menu-item"><span class="head__menu-label">Контакты</span><span class="head__menu-label">Услуги</span><span class="head__menu-label">Бронирование</span><span class="head__menu-label">Главная</span></div>
-      </div>
-      <div class="head__icon-container"></div>
-      <div class="head__contacts-container"><span class="head__contacts-phone"><a href="tel:+7(919)723-30-87" class="head__contacts-link">+7(919)723-30-87</a></span><span class="head__contacts-email"><a href="mailto:motokeeper@mail.ru" class="head__contacts-link">motokeeper@mail.ru</a></span></div>
-    </section>
-    <section class="content">
-      <div class="content-logo"></div>
-      <div class="calculator-container">
-        <div class="calculator__box-container">
-          <input placeholder="Ваше имя" class="calculator__box calculator__box-input">
-          <div class="calculator__box calculator__box-selector-container">
-            <select>
-              <option value="" disabled selected>Тип мотоцикла</option>
-              <option value="До 700 куб.см">До 700 куб.см</option>
-              <option value="До 1400 куб.см">До 1400 куб.см</option>
-              <option value="Более 1400 куб. см">Более 1400 куб. см</option>
-              <option value="Max-Size">Max-Size</option>
-            </select>
-          </div>
-          <div class="calculator__box calculator__box-selector-container">
-            <select>
-              <option value="" disabled selected>Кол-во месяцев</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-            </select>
-          </div>
-          <input placeholder="Телефон для связи" class="calculator__box calculator__box-input">
-        </div><span class="calculator-law">Ваши данные не будут переданы третьим лицам.</span>
-        <div class="calculator__button"><span class="calculator__button-label">Бронировать</span>
-          <div class="calculator__button-icon"></div>
-        </div><span class="calculator-price">6000 руб.</span>
-      </div>
-      <div class="motos__container">
-        <div class="motos__box"><span class="motos__box-name">До 700 куб.см</span><span class="motos__box-price">1200 р/мес</span>
-          <div style="background-image:url(img/images/moto-1200.png)" class="motos__box-picture"></div>
-        </div>
-        <div class="motos__box"><span class="motos__box-name">От 700 до 1400 куб.см</span><span class="motos__box-price">1300 р/мес</span>
-          <div style="background-image:url(img/images/moto-1300.png)" class="motos__box-picture"></div>
-        </div>
-        <div class="motos__box"><span class="motos__box-name">От 1400 куб.см</span><span class="motos__box-price">1400 р/мес</span>
-          <div style="background-image:url(img/images/moto-1400.png)" class="motos__box-picture"></div>
-        </div>
-        <div class="motos__box"><span class="motos__box-name">Большие мотоциклы GoldWing и аналоги</span><span class="motos__box-price">1500 р/мес</span>
-          <div style="background-image:url(img/images/moto-1500.png)" class="motos__box-picture"></div>
-        </div>
-      </div>
-      <hr class="content-hr">
-      <div class="saleship__container">
-        <div class="saleship-sign"></div>
-        <div class="saleship-text">Бесплатная эвакуация и доставка мотоцикла!</div>
-        <div class="saleship-car"></div>
-      </div>
-      <hr class="content-hr">
-      <div class="cameras__container">
-        <div class="cameras-box"></div>
-        <div class="cameras__button"><span class="cameras__button-label">Следующая камера</span>
-          <div class="cameras__button-icon"></div>
-        </div>
-      </div>
-      <div class="services-container"><span class="services-label">Услуги и условия хранения</span>
-        <ul class="services__list">
-          <li class="services__list-item">Мототехника будет содержаться в <b>круглосуточно охраняемом помещении</b>, оборудованном противопожарной сигнализацией.</li>
-          <li class="services__list-item">На протяжении всего срока хранения устанавливается <b>благприятный микроклимат для мототехники </b>с поддержкой необходимой темперетуры и влажности.</li>
-          <li class="services__list-item">On-line камеры.</li>
-          <li class="services__list-item">Услуги ТО.</li>
-          <li class="services__list-item">Услуги консервации/расконсервации (1000 руб.)</li>
-          <li class="services__list-item">Чехлы для мототехники.</li>
-          <li class="services__list-item">С каждым клиентом заключается<b> <u>договор на хранение мототехники</u></b></li>
-          <li class="services__list-item"><b>Бесплатная эвакуация и доставка мотоцикла от и до места хранения</b> (при хаключении догоора на 6 месяцев)</li>
-        </ul>
-      </div>
-      <div class="contacts-container"><span class="contacts-title">Контакты:</span>
-        <table class="contacts__table">
-          <tr>
-            <td>Телефон:</td>
-            <td><a href="tel:+7(919)723-30-87" class="contacts__table-link">+7(919)723-30-87</a></td>
-          </tr>
-          <tr>
-            <td>E-Mail:</td>
-            <td><a href="mailto:motokeeper@mail.ru" class="contacts__table-link">motokeeper@mail.ru</a></td>
-          </tr>
-          <tr>
-            <td>
-              <div class="contacts__table-icon-vk"></div>
-            </td>
-            <td><a href="https://vk.com/motosafe" class="contacts__table-link">vk.com/motosafe</a></td>
-          </tr>
-        </table>
-      </div>
-    </section>
-    <section class="foot"><span class="foot__block foot__block-city">г. Москва</span><span class="foot__block foot__block-name">"MOTOKEEPER"</span><span class="foot__block foot__block-doc"><a href="#">Договор на хранение мототехники</a></span></section>
-  </body>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </html>
+<body>
+  <section class="head">
+    <div class="head__menu-container">
+      <div class="head__menu-item"><span class="head__menu-label">Контакты</span><span class="head__menu-label">Услуги</span><span class="head__menu-label">Бронирование</span><span class="head__menu-label">Главная</span></div>
+    </div>
+    <div class="head__icon-container"></div>
+    <div class="head__contacts-container"><span class="head__contacts-phone"><a href="tel:+7(919)723-30-87" class="head__contacts-link">+7(919)723-30-87</a></span><span class="head__contacts-email"><a href="mailto:motokeeper@mail.ru" class="head__contacts-link">motokeeper@mail.ru</a></span></div>
+  </section>
+  <section class="content">
+    <div class="content-logo"></div>
+    <div class="calculator-container"><span class="calculator-law-phone">Формат ввода: +7(909)625-06-68 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <div class="calculator__box-container">
+        <div class="calculator__box">
+          <input placeholder="Ваше имя" data-bind-keydown="clearError" class="calculator__box-input">
+        </div>
+        <div class="calculator__box calculator__box-selector-container">
+          <select data-bind-change="calculatePrice" data-bind-keydown="clearError">
+            <option value="" disabled selected>Тип мотоцикла</option>
+            <option value="1200">До 700 куб.см</option>
+            <option value="1300">До 1400 куб.см</option>
+            <option value="1400">Более 1400 куб. см</option>
+            <option value="1500">Max-Size</option>
+          </select>
+        </div>
+        <div class="calculator__box calculator__box-selector-container">
+          <select data-bind-change="calculatePrice" data-month="true" data-bind-keydown="clearError">
+            <option value="" disabled selected>Кол-во месяцев</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="calculator__box">
+          <input placeholder="Телефон для связи" data-bind-keydown="clearError" data-bind-keyup="validatePhone" class="calculator__box-input">
+        </div>
+      </div><span class="calculator-law">Ваши данные не будут переданы третьим лицам.</span>
+      <div data-bind-click="sendRequest" class="calculator__button"><span class="calculator__button-label">Бронировать</span>
+        <div class="calculator__button-icon"></div>
+      </div><span class="calculator-price">0 руб.</span><span class="calculator-price-comment">Выберите размер мотоцикла и срок хранения.</span>
+    </div>
+    <div class="motos__container">
+      <div class="motos__box"><span class="motos__box-name">До 700 куб.см</span><span class="motos__box-price">1200 р/мес</span>
+        <div style="background-image:url(img/images/moto-1200.png)" class="motos__box-picture"></div>
+      </div>
+      <div class="motos__box"><span class="motos__box-name">От 700 до 1400 куб.см</span><span class="motos__box-price">1300 р/мес</span>
+        <div style="background-image:url(img/images/moto-1300.png)" class="motos__box-picture"></div>
+      </div>
+      <div class="motos__box"><span class="motos__box-name">От 1400 куб.см</span><span class="motos__box-price">1400 р/мес</span>
+        <div style="background-image:url(img/images/moto-1400.png)" class="motos__box-picture"></div>
+      </div>
+      <div class="motos__box"><span class="motos__box-name">Большие мотоциклы GoldWing и аналоги</span><span class="motos__box-price">1500 р/мес</span>
+        <div style="background-image:url(img/images/moto-1500.png)" class="motos__box-picture"></div>
+      </div>
+    </div>
+    <hr class="content-hr">
+    <div class="saleship__container">
+      <div class="saleship-sign"></div>
+      <div class="saleship-text">Бесплатная эвакуация и доставка мотоцикла!</div>
+      <div class="saleship-car"></div>
+    </div>
+    <hr class="content-hr">
+    <div class="cameras__container">
+      <div class="cameras-box"></div>
+      <div class="cameras__button"><span class="cameras__button-label">Следующая камера</span>
+        <div class="cameras__button-icon"></div>
+      </div>
+    </div>
+    <div class="services-container"><span class="services-label">Услуги и условия хранения</span>
+      <ul class="services__list">
+        <li class="services__list-item">Мототехника будет содержаться в <b>круглосуточно охраняемом помещении</b>, оборудованном противопожарной сигнализацией.</li>
+        <li class="services__list-item">На протяжении всего срока хранения устанавливается <b>благприятный микроклимат для мототехники </b>с поддержкой необходимой темперетуры и влажности.</li>
+        <li class="services__list-item">On-line камеры.</li>
+        <li class="services__list-item">Услуги ТО.</li>
+        <li class="services__list-item">Услуги консервации/расконсервации (1000 руб.)</li>
+        <li class="services__list-item">Чехлы для мототехники.</li>
+        <li class="services__list-item">С каждым клиентом заключается<b> <u>договор на хранение мототехники</u></b></li>
+        <li class="services__list-item"><b>Бесплатная эвакуация и доставка мотоцикла от и до места хранения</b> (при хаключении догоора на 6 месяцев)</li>
+      </ul>
+    </div>
+    <div class="contacts-container"><span class="contacts-title">Контакты:</span>
+      <table class="contacts__table">
+        <tr>
+          <td>Телефон:</td>
+          <td><a href="tel:+7(919)723-30-87" class="contacts__table-link">+7(919)723-30-87</a></td>
+        </tr>
+        <tr>
+          <td>E-Mail:</td>
+          <td><a href="mailto:motokeeper@mail.ru" class="contacts__table-link">motokeeper@mail.ru</a></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="contacts__table-icon-vk"></div>
+          </td>
+          <td><a href="https://vk.com/motosafe" class="contacts__table-link">vk.com/motosafe</a></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <section class="foot"><span class="foot__block foot__block-city">г. Москва</span><span class="foot__block foot__block-name">"MOTOKEEPER"</span><span class="foot__block foot__block-doc"><a href="#">Договор на хранение мототехники</a></span></section>
+  <script src="js/main.js"></script>
+</body>
