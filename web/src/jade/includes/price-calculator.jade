@@ -1,5 +1,5 @@
 div(class='calculator-container')
-    span(class='calculator-law-phone') Формат ввода: +7(909)625-06-68 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    span(class='calculator-law-phone') Формат ввода: +7(012)345-67-89 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     div(class='calculator__box-container')
         div(class='calculator__box')
             input(class='calculator__box-input' placeholder='Ваше имя' data-bind-keydown='clearError')
@@ -7,9 +7,9 @@ div(class='calculator-container')
             select(data-bind-change='calculatePrice' data-bind-keydown='clearError')
                 option(value='' disabled selected) Тип мотоцикла
                 option(value='1200') До 700 куб.см
-                option(value='1300') До 1400 куб.см
-                option(value='1400') Более 1400 куб. см
-                option(value='1500') Max-Size
+                option(value='1400') До 1400 куб.см
+                option(value='1600') Более 1400 куб. см
+                option(value='1800') Max-Size
         div(class='calculator__box calculator__box-selector-container')
             - var n = 1
             select(data-bind-change='calculatePrice' data-month='true' data-bind-keydown='clearError')
