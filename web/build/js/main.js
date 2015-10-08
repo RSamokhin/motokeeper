@@ -201,7 +201,7 @@ window.Handlers = {
                     return a * b.value;
                 }, 1]);
                 if (parseInt($monthField.val()) < fullMonth) {
-                    saleShip = saleShipPrice - (saleShipPrice/fullMonth) * $monthField.val();
+                    saleShip = 2000;//saleShipPrice - (saleShipPrice/fullMonth) * $monthField.val();
                     price += saleShip;
                 }
                 $priceField.text(price + ' руб');
