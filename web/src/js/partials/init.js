@@ -36,7 +36,10 @@ window.Handlers = {
                     url: '/task',
                     data: data,
                     success: function (data) {
-                        console.log(data)
+                        if (data.toString() === 'OK') {
+                            alert('Заявка успешно отправлена, мы скоро Вам позвоним');
+                            location.reload();
+                        }
                     }
                 });
             }
