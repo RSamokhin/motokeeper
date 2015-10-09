@@ -31,7 +31,14 @@ window.Handlers = {
                 data = [].reduce.apply($inputs, [function (a, b) {
                     return a + ' ' + b.value;
                 }, 'Заявка: ']);
-                console.log(data);
+                $.ajax({
+                    type: 'POST',
+                    url: '/task',
+                    data: data,
+                    success: function (data) {
+                        console.log(data)
+                    }
+                });
             }
         }
     },

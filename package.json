@@ -20,8 +20,12 @@
   },
   "homepage": "https://github.com/RSamokhin/motokeeper#readme",
   "dependencies": {
+    "co-body": "^4.0.0",
     "forever": "^0.15.1",
     "koa": "^1.0.0",
-    "koa-static": "^1.4.9"
+    "koa-body-parser": "^1.1.2",
+    "koa-route": "^2.4.2",
+    "koa-static": "^1.4.9",
+    "sendmail": "^0.2.1"
   }
 }
