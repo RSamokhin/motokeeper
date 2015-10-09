@@ -12,11 +12,12 @@ app.use(bodyParser());
 
 app.use(route.post('/task', function *(){
     var req = this.request.body,
-        email = 'motokeeper@mail.ru';
+        email = 'motokeeper@mail.ru',
+        from = 'taskmail@motokeeper.ru',
         task = JSON.stringify(req,null,2)
 
     sendmail({
-        from: email,
+        from: from,
         to: email,
         subject: 'ЗАЯВКА',
         content: task,
