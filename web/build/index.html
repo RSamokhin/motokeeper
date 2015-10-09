@@ -8,14 +8,14 @@
 <body>
   <section class="head">
     <div class="head__menu-container">
-      <div class="head__menu-item"><span class="head__menu-label">Контакты</span><span class="head__menu-label">Услуги</span><span class="head__menu-label">Бронирование</span><span class="head__menu-label">Главная</span></div>
+      <div class="head__menu-item"><a href="#contacts" class="head__menu-label">Контакты</a><a href="#services" class="head__menu-label">Услуги</a><a href="#book" class="head__menu-label">Бронирование</a><a href="#top" id="top" class="head__menu-label">Главная</a></div>
     </div>
     <div class="head__icon-container"></div>
     <div class="head__contacts-container"><span class="head__contacts-phone"><a href="tel:+7(919)723-30-87" class="head__contacts-link">+7(919)723-30-87</a></span><span class="head__contacts-email"><a href="mailto:motokeeper@mail.ru" class="head__contacts-link">motokeeper@mail.ru</a></span></div>
   </section>
   <section class="content">
     <div class="content-logo"></div>
-    <div class="calculator-container">
+    <div id="book" class="calculator-container">
       <div class="calculator__box-container">
         <div class="calculator__box">
           <input placeholder="Ваше имя" data-bind-keydown="clearError" class="calculator__box-input">
@@ -75,7 +75,7 @@
         <div class="cameras__button-icon"></div>
       </div>
     </div>
-    <div class="services-container"><span class="services-label">Услуги и условия хранения</span>
+    <div id="services" class="services-container"><span class="services-label">Услуги и условия хранения</span>
       <ul class="services__list">
         <li class="services__list-item">Мототехника будет содержаться в <b>круглосуточно охраняемом помещении</b>, оборудованном противопожарной сигнализацией.</li>
         <li class="services__list-item">На протяжении всего срока хранения устанавливается <b>благприятный микроклимат для мототехники </b>с поддержкой необходимой темперетуры и влажности.</li>
@@ -87,7 +87,7 @@
         <li class="services__list-item"><b>Эвакуация и доставка мотоцикла от и до места хранения</b>  по цене 1000 руб</li>
       </ul>
     </div>
-    <div class="contacts-container"><span class="contacts-title">Контакты:</span>
+    <div id="contacts" class="contacts-container"><span class="contacts-title">Контакты:</span>
       <table class="contacts__table">
         <tr>
           <td>Телефон:</td>
