@@ -1,5 +1,4 @@
 div(class='calculator-container')
-    span(class='calculator-law-phone') Формат ввода: +7(012)345-67-89 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     div(class='calculator__box-container')
         div(class='calculator__box')
             input(class='calculator__box-input' placeholder='Ваше имя' data-bind-keydown='clearError')
@@ -18,7 +17,7 @@ div(class='calculator-container')
                     - var m = n++
                     option(value=m)=m
         div(class='calculator__box')
-            input(class='calculator__box-input' placeholder='Телефон для связи' data-bind-keydown='clearError' data-bind-keyup='validatePhone')
+            input(class='calculator__box-input' placeholder='Телефон для связи' data-bind-keydown='clearError')
     span(class='calculator-law') Ваши данные не будут переданы третьим лицам.
     div(class='calculator__button' data-bind-click='sendRequest')
         span(class='calculator__button-label') Бронировать

@@ -20,7 +20,7 @@ app.use(route.post('/task', function *(){
         from: from,
         to: email,
         subject: 'ЗАЯВКА',
-        content: task,
+        content: task
     }, function(err, reply) {
         console.log(err && err.stack);
         console.dir(reply);
